@@ -1,0 +1,18 @@
+---
+# tasks file for roles/Instala-tools_Dinamita
+
+- name: "Rol: Instala-tools_Dinamita - Grupo: Dinamita"
+  debug:
+    msg: "Inicio de tareas dentro del Rol: Instala-tools_Dinamita"
+
+- name: "Instala herramientas"
+  become: yes
+  package:
+    name:
+      - htop
+      - tmux
+      - speedtest-cli
+      - ansible
+      - git
+      - sshpass
+    state: present

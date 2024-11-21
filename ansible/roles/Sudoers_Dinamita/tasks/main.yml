@@ -1,0 +1,16 @@
+---
+# tasks file for roles/Sudoers_Dinamita
+
+
+
+- name: "Rol: Sudoers_Dinamita - Grupo: Dinamita"
+  debug:
+   msg: "Inicio de tareas dentro del Rol: Sudoers_Dinamita"
+
+
+- name: "Agregar grupo Dinamita a sudoers sin clave"
+  become: yes
+  lineinfile:
+    path: /etc/sudoers
+    state: present
+    line: '%rejunte ALL=(ALL) NOPASSWD: ALL'

@@ -1,0 +1,17 @@
+#https://jinja.palletsprojects.com/en/3.0.x/
+
+
+Nombre Grupo: {{ Nombre_Grupo }}
+División: {{ division | upper }}
+Fecha: {{ ansible_date_time.date }}
+—-------------------------
+Distribución: {{ ansible_facts.distribution }}
+Cantidad de Cores: {{ ansible_processor_cores }}
+—-------------------------
+R1: Nombre:joe     Apellido: 
+R2: Nombre:Andres     Apellido: 
+R3: Nombre:Andres     Apellido: 
+R4: Nombre:     Apellido: 
+R5: Nombre:Andres     Apellido: Nazadek
+R6: Nombre:     Apellido: 
+
