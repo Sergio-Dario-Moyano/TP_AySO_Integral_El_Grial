@@ -1,14 +1,14 @@
 ---
 - hosts: 
-  - all
-# - testing
-# - produccion
+    - all
+    # - testing
+    # - produccion
 
-  # Variables Globales
   vars_files:
     - vars/main.yml
 
   tasks:
+
     - include_role:
         name: Instala-tools_Dinamita
 
@@ -20,4 +20,3 @@
 
     - include_role:
         name: Sudoers_Dinamita
-

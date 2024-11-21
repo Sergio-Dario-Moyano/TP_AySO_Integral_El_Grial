@@ -1,79 +1,40 @@
-# tasks file for roles/Alta_Usuarios_Dinamita
+---
 
-- name: "Rol: Alta_Usuarios - Grupo: Dinamita"
-  debug:
-    msg: "Inicio de tareas dentro del Rol: Alta_Usuarios"
 
-- name: "Creo grupos"
+- name: "Parciando listado de grupos secundarios: LIST_USUARIOS.GROUPS "
+  set_fact: foo_item="{{ item.GROUPS.split(',') }}"
+  with_items: "{{ LIST_USUARIOS  }}"
+  register: foo_result
+  
+
+- name: "Cargando listado GruposToCreate"
+  set_fact: GruposToCreate="{{ foo_result.results | map(attribute='ansible_facts.foo_item') | list }}"
+  
+
+- name: "Alta de groups Secundarios del usuario "
   become: yes
-  ansible.builtin.group:
+  group:
     name: "{{ item }}"
     state: present
-  loop:
-    - G_R1
-    - G_R2
-    - G_R3
-    - G_R4
-    - G_R5
-    - G_R6
-    - Dinamita
+  with_items: "{{ GruposToCreate }}"
+  
 
-- name: "Crea usuario R1"
+- name: "Agregando group Primario del usuario "
   become: yes
-  ansible.builtin.user:
-    name: R1_Sergio_moyano
-    create_home: yes
-    group: G_R1
-    groups: Dinamita
+  group:
+    name: "{{ item.USERNAME }}"
     state: present
-    password: "$6$/3uOGc8A$r71sUuTU/81BNDdq8d8Dl/ammVIJXXRcoxU1KP1nTvY25pjPCxd4.Xwthee.6axijc3fQJkH88qwpP8Fni9lB.:19515:0:99999:7:::"
+  with_items: "{{ LIST_USUARIOS }}"
+  
 
-- name: "Crea usuario R2"
+    
+- name: "Alta y/o Actualizacion del usuario"
   become: yes
-  ansible.builtin.user:
-    name: R2_Joel_Monzon
-    create_home: yes
-    group: G_R2
-    groups: Dinamita
+  user:
+    name: "{{ item.USERNAME }}"
+    password: "{{ item.HASH }}"
+    group: "{{ item.USERNAME }}"
+    groups: "{{item.GROUPS}}"
     state: present
-    password: "$6$/3uOGc8A$r71sUuTU/81BNDdq8d8Dl/ammVIJXXRcoxU1KP1nTvY25pjPCxd4.Xwthee.6axijc3fQJkH88qwpP8Fni9lB.:19515:0:99999:7:::"
-
-- name: "Crea usuario R3"
-  become: yes
-  ansible.builtin.user:
-    name: R3_Agustin_Paredes
-    create_home: yes
-    group: G_R3
-    groups: Dinamita
-    state: present
-    password: "$6$/3uOGc8A$r71sUuTU/81BNDdq8d8Dl/ammVIJXXRcoxU1KP1nTvY25pjPCxd4.Xwthee.6axijc3fQJkH88qwpP8Fni9lB.:19515:0:99999:7:::"
-
-- name: "Crea usuario R4"
-  become: yes
-  ansible.builtin.user:
-    name: R4_Otro_usu
-    create_home: yes
-    group: G_R4
-    groups: Dinamita
-    state: present
-    password: "$6$/3uOGc8A$r71sUuTU/81BNDdq8d8Dl/ammVIJXXRcoxU1KP1nTvY25pjPCxd4.Xwthee.6axijc3fQJkH88qwpP8Fni9lB.:19515:0:99999:7:::"
-
-- name: "Crea usuario R5"
-  become: yes
-  ansible.builtin.user:
-    name: R5_Otro_usu
-    create_home: yes
-    group: G_R5
-    groups: Dinamita
-    state: present
-    password: "$6$/3uOGc8A$r71sUuTU/81BNDdq8d8Dl/ammVIJXXRcoxU1KP1nTvY25pjPCxd4.Xwthee.6axijc3fQJkH88qwpP8Fni9lB.:19515:0:99999:7:::"
-
-- name: "Crea usuario R6"
-  become: yes
-  ansible.builtin.user:
-    name: R6_Sergio_moyano  
-    create_home: yes
-    group: G_R6
-    groups: Dinamita
-    state: present
-    password: "$6$/3uOGc8A$r71sUuTU/81BNDdq8d8Dl/ammVIJXXRcoxU1KP1nTvY25pjPCxd4.Xwthee.6axijc3fQJkH88qwpP8Fni9lB.:19515:0:99999:7:::"
+    append: yes
+  with_items: "{{ LIST_USUARIOS }}"

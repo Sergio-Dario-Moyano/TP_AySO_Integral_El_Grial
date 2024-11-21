@@ -1,23 +1,18 @@
 ---
 # tasks file for TP_INI
 
-- name: "Rol: TP_INI - Grupo: {{ Nombre_Grupo }}"
+- name: "Rol: TP_INI - Grupo: Dinamita"
   debug:
     msg: "Inicio de tareas dentro del Rol: TP_INI"
-
-
-- name: "Crear directorios en /tmp/multi_Pruebas_borrame/"
+             
+- name: "Creo directorio para el archivo"
   file:
-    path: "/tmp/{{ Nombre_Grupo }}/{{ item }}"
+    path: /tmp/Grupo
     state: directory
-    mode: '0775'
-    recurse: yes
-  with_items: 
-    - "log"
-    - "config"
-    - "config/algo"
+    owner: vagrant
 
-- name: "Agrego archivo desde template"
+- name: "Creo el archivo desde template"
   template:
     src: template_01.j2
-    dest: /tmp/{{ Nombre_Grupo }}/datos.txt
+    dest: /tmp/Grupo/datos.txt
+    owner: vagrant

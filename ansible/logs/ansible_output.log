@@ -881,3 +881,1400 @@ The offending line appears to be:
 2024-11-21 01:20:04,461 p=19141 u=vagrant |  localhost                  : ok=6    changed=0    unreachable=0    failed=0   
 2024-11-21 01:20:04,462 p=19141 u=vagrant |  no-existe.com              : ok=0    changed=0    unreachable=1    failed=0   
 2024-11-21 01:20:04,463 p=19141 u=vagrant |  no-existe2.com             : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 03:53:21,184 p=20305 u=vagrant |  - roles/Crear_Grupos_Dinamita was created successfully
+2024-11-21 03:58:35,337 p=20354 u=vagrant |   [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-21 03:58:35,890 p=20354 u=vagrant |  PLAY [all] *******************************************************************************************************************************************************************************************************
+2024-11-21 03:58:35,927 p=20354 u=vagrant |  TASK [Gathering Facts] *******************************************************************************************************************************************************************************************
+2024-11-21 03:58:37,401 p=20354 u=vagrant |  fatal: [192.168.56.10]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '192.168.56.10' (ECDSA) to the list of known hosts.\r\nvagrant@192.168.56.10: Permission denied (publickey).\r\n", "unreachable": true}
+2024-11-21 03:58:37,404 p=20354 u=vagrant |  fatal: [192.168.56.11]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '192.168.56.11' (ECDSA) to the list of known hosts.\r\nvagrant@192.168.56.11: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\r\n", "unreachable": true}
+2024-11-21 03:58:37,648 p=20354 u=vagrant |  fatal: [no-existe.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname no-existe.com: Name or service not known\r\n", "unreachable": true}
+2024-11-21 03:58:38,901 p=20354 u=vagrant |  ok: [localhost]
+2024-11-21 03:58:38,956 p=20354 u=vagrant |  ok: [127.0.0.1]
+2024-11-21 03:58:47,629 p=20354 u=vagrant |  fatal: [no-existe2.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 200.200.200.1 port 22: Connection timed out\r\n", "unreachable": true}
+2024-11-21 03:58:47,707 p=20354 u=vagrant |  TASK [include_role] **********************************************************************************************************************************************************************************************
+2024-11-21 03:58:48,033 p=20354 u=vagrant |  ERROR! Syntax Error while loading YAML.
+  but found another document
+
+The error appears to have been in '/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/roles/Crear_Grupos_Dinamita/tasks/main.yml': line 4, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+---
+^ here
+
+2024-11-21 03:58:48,037 p=20354 u=vagrant |  	to retry, use: --limit @/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/playbook.retry
+
+2024-11-21 03:58:48,037 p=20354 u=vagrant |  PLAY RECAP *******************************************************************************************************************************************************************************************************
+2024-11-21 03:58:48,037 p=20354 u=vagrant |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 03:58:48,037 p=20354 u=vagrant |  192.168.56.10              : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 03:58:48,038 p=20354 u=vagrant |  192.168.56.11              : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 03:58:48,038 p=20354 u=vagrant |  localhost                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 03:58:48,038 p=20354 u=vagrant |  no-existe.com              : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 03:58:48,038 p=20354 u=vagrant |  no-existe2.com             : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 04:02:41,671 p=20548 u=vagrant |   [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-21 04:02:42,288 p=20548 u=vagrant |  PLAY [all] *******************************************************************************************************************************************************************************************************
+2024-11-21 04:02:42,371 p=20548 u=vagrant |  TASK [Gathering Facts] *******************************************************************************************************************************************************************************************
+2024-11-21 04:02:43,692 p=20548 u=vagrant |  fatal: [no-existe.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname no-existe.com: Name or service not known\r\n", "unreachable": true}
+2024-11-21 04:02:43,748 p=20548 u=vagrant |  fatal: [192.168.56.10]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '192.168.56.10' (ECDSA) to the list of known hosts.\r\nvagrant@192.168.56.10: Permission denied (publickey).\r\n", "unreachable": true}
+2024-11-21 04:02:45,490 p=20548 u=vagrant |  ok: [localhost]
+2024-11-21 04:02:45,569 p=20548 u=vagrant |  ok: [127.0.0.1]
+2024-11-21 04:02:46,007 p=20548 u=vagrant |  ok: [192.168.56.11]
+2024-11-21 04:02:53,975 p=20548 u=vagrant |  fatal: [no-existe2.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 200.200.200.1 port 22: Connection timed out\r\n", "unreachable": true}
+2024-11-21 04:02:54,068 p=20548 u=vagrant |  TASK [include_role] **********************************************************************************************************************************************************************************************
+2024-11-21 04:02:54,486 p=20548 u=vagrant |  ERROR! Syntax Error while loading YAML.
+  but found another document
+
+The error appears to have been in '/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/roles/Crear_Grupos_Dinamita/tasks/main.yml': line 4, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+---
+^ here
+
+2024-11-21 04:02:54,489 p=20548 u=vagrant |  	to retry, use: --limit @/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/playbook.retry
+
+2024-11-21 04:02:54,490 p=20548 u=vagrant |  PLAY RECAP *******************************************************************************************************************************************************************************************************
+2024-11-21 04:02:54,491 p=20548 u=vagrant |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:02:54,491 p=20548 u=vagrant |  192.168.56.10              : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 04:02:54,492 p=20548 u=vagrant |  192.168.56.11              : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:02:54,492 p=20548 u=vagrant |  localhost                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:02:54,493 p=20548 u=vagrant |  no-existe.com              : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 04:02:54,493 p=20548 u=vagrant |  no-existe2.com             : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 04:10:18,552 p=20756 u=vagrant |   [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-21 04:10:19,137 p=20756 u=vagrant |  PLAY [all] *******************************************************************************************************************************************************************************************************
+2024-11-21 04:10:19,199 p=20756 u=vagrant |  TASK [Gathering Facts] *******************************************************************************************************************************************************************************************
+2024-11-21 04:10:21,109 p=20756 u=vagrant |  fatal: [no-existe.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname no-existe.com: Name or service not known\r\n", "unreachable": true}
+2024-11-21 04:10:23,302 p=20756 u=vagrant |  ok: [127.0.0.1]
+2024-11-21 04:10:23,396 p=20756 u=vagrant |  ok: [localhost]
+2024-11-21 04:10:23,431 p=20756 u=vagrant |  ok: [192.168.56.11]
+2024-11-21 04:10:25,102 p=20756 u=vagrant |  ok: [192.168.56.10]
+2024-11-21 04:10:31,523 p=20756 u=vagrant |  fatal: [no-existe2.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 200.200.200.1 port 22: Connection timed out\r\n", "unreachable": true}
+2024-11-21 04:10:31,600 p=20756 u=vagrant |  TASK [include_role] **********************************************************************************************************************************************************************************************
+2024-11-21 04:10:32,256 p=20756 u=vagrant |  ERROR! Syntax Error while loading YAML.
+  but found another document
+
+The error appears to have been in '/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/roles/Crear_Grupos_Dinamita/tasks/main.yml': line 4, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+---
+^ here
+
+2024-11-21 04:10:32,260 p=20756 u=vagrant |  	to retry, use: --limit @/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/playbook.retry
+
+2024-11-21 04:10:32,261 p=20756 u=vagrant |  PLAY RECAP *******************************************************************************************************************************************************************************************************
+2024-11-21 04:10:32,261 p=20756 u=vagrant |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:10:32,262 p=20756 u=vagrant |  192.168.56.10              : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:10:32,262 p=20756 u=vagrant |  192.168.56.11              : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:10:32,262 p=20756 u=vagrant |  localhost                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:10:32,263 p=20756 u=vagrant |  no-existe.com              : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 04:10:32,263 p=20756 u=vagrant |  no-existe2.com             : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 04:12:21,001 p=21106 u=vagrant |   [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-21 04:12:21,552 p=21106 u=vagrant |  PLAY [all] *******************************************************************************************************************************************************************************************************
+2024-11-21 04:12:21,632 p=21106 u=vagrant |  TASK [Gathering Facts] *******************************************************************************************************************************************************************************************
+2024-11-21 04:12:23,028 p=21106 u=vagrant |  fatal: [no-existe.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname no-existe.com: Name or service not known\r\n", "unreachable": true}
+2024-11-21 04:12:25,518 p=21106 u=vagrant |  ok: [192.168.56.11]
+2024-11-21 04:12:25,618 p=21106 u=vagrant |  ok: [127.0.0.1]
+2024-11-21 04:12:25,695 p=21106 u=vagrant |  ok: [localhost]
+2024-11-21 04:12:27,168 p=21106 u=vagrant |  ok: [192.168.56.10]
+2024-11-21 04:12:33,272 p=21106 u=vagrant |  fatal: [no-existe2.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 200.200.200.1 port 22: Connection timed out\r\n", "unreachable": true}
+2024-11-21 04:12:33,355 p=21106 u=vagrant |  TASK [include_role] **********************************************************************************************************************************************************************************************
+2024-11-21 04:12:34,258 p=21106 u=vagrant |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/roles/Crear_Grupos_Dinamita/tasks/main.yml': line 4, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: "Creo grupos"
+  ^ here
+
+2024-11-21 04:12:34,263 p=21106 u=vagrant |  	to retry, use: --limit @/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/playbook.retry
+
+2024-11-21 04:12:34,264 p=21106 u=vagrant |  PLAY RECAP *******************************************************************************************************************************************************************************************************
+2024-11-21 04:12:34,265 p=21106 u=vagrant |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:12:34,265 p=21106 u=vagrant |  192.168.56.10              : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:12:34,266 p=21106 u=vagrant |  192.168.56.11              : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:12:34,267 p=21106 u=vagrant |  localhost                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:12:34,267 p=21106 u=vagrant |  no-existe.com              : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 04:12:34,268 p=21106 u=vagrant |  no-existe2.com             : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 04:18:58,912 p=21410 u=vagrant |   [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-21 04:18:59,448 p=21410 u=vagrant |  PLAY [all] *******************************************************************************************************************************************************************************************************
+2024-11-21 04:18:59,490 p=21410 u=vagrant |  TASK [Gathering Facts] *******************************************************************************************************************************************************************************************
+2024-11-21 04:19:01,320 p=21410 u=vagrant |  fatal: [no-existe.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname no-existe.com: Name or service not known\r\n", "unreachable": true}
+2024-11-21 04:19:03,694 p=21410 u=vagrant |  ok: [localhost]
+2024-11-21 04:19:03,864 p=21410 u=vagrant |  ok: [127.0.0.1]
+2024-11-21 04:19:03,947 p=21410 u=vagrant |  ok: [192.168.56.11]
+2024-11-21 04:19:05,709 p=21410 u=vagrant |  ok: [192.168.56.10]
+2024-11-21 04:19:11,791 p=21410 u=vagrant |  fatal: [no-existe2.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 200.200.200.1 port 22: Connection timed out\r\n", "unreachable": true}
+2024-11-21 04:19:11,871 p=21410 u=vagrant |  TASK [include_role] **********************************************************************************************************************************************************************************************
+2024-11-21 04:19:12,608 p=21410 u=vagrant |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/roles/Crear_Grupos_Dinamita/tasks/main.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: "Creo grupos"
+  ^ here
+
+2024-11-21 04:19:12,613 p=21410 u=vagrant |  	to retry, use: --limit @/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/playbook.retry
+
+2024-11-21 04:19:12,613 p=21410 u=vagrant |  PLAY RECAP *******************************************************************************************************************************************************************************************************
+2024-11-21 04:19:12,614 p=21410 u=vagrant |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:19:12,615 p=21410 u=vagrant |  192.168.56.10              : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:19:12,616 p=21410 u=vagrant |  192.168.56.11              : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:19:12,616 p=21410 u=vagrant |  localhost                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:19:12,617 p=21410 u=vagrant |  no-existe.com              : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 04:19:12,617 p=21410 u=vagrant |  no-existe2.com             : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 04:41:11,360 p=21788 u=vagrant |   [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-21 04:41:11,386 p=21788 u=vagrant |  ERROR! Syntax Error while loading YAML.
+  block sequence entries are not allowed in this context
+
+The error appears to have been in '/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/playbook.yml': line 13, column 15, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    - include_role:
+        name: - Crear_Grupos_Dinamita
+              ^ here
+
+2024-11-21 04:42:18,018 p=21809 u=vagrant |   [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-21 04:42:18,594 p=21809 u=vagrant |  PLAY [all] *******************************************************************************************************************************************************************************************************
+2024-11-21 04:42:18,659 p=21809 u=vagrant |  TASK [Gathering Facts] *******************************************************************************************************************************************************************************************
+2024-11-21 04:42:20,357 p=21809 u=vagrant |  fatal: [no-existe.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname no-existe.com: Name or service not known\r\n", "unreachable": true}
+2024-11-21 04:42:22,419 p=21809 u=vagrant |  ok: [localhost]
+2024-11-21 04:42:22,630 p=21809 u=vagrant |  ok: [127.0.0.1]
+2024-11-21 04:42:22,822 p=21809 u=vagrant |  ok: [192.168.56.11]
+2024-11-21 04:42:24,203 p=21809 u=vagrant |  ok: [192.168.56.10]
+2024-11-21 04:42:30,802 p=21809 u=vagrant |  fatal: [no-existe2.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 200.200.200.1 port 22: Connection timed out\r\n", "unreachable": true}
+2024-11-21 04:42:30,952 p=21809 u=vagrant |  TASK [include_role] **********************************************************************************************************************************************************************************************
+2024-11-21 04:42:31,680 p=21809 u=vagrant |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/roles/Crear_Grupos_Dinamita/tasks/main.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: "Creo grupos"
+  ^ here
+
+2024-11-21 04:42:31,685 p=21809 u=vagrant |  	to retry, use: --limit @/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/playbook.retry
+
+2024-11-21 04:42:31,685 p=21809 u=vagrant |  PLAY RECAP *******************************************************************************************************************************************************************************************************
+2024-11-21 04:42:31,686 p=21809 u=vagrant |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:42:31,686 p=21809 u=vagrant |  192.168.56.10              : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:42:31,687 p=21809 u=vagrant |  192.168.56.11              : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:42:31,687 p=21809 u=vagrant |  localhost                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:42:31,687 p=21809 u=vagrant |  no-existe.com              : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 04:42:31,688 p=21809 u=vagrant |  no-existe2.com             : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 04:47:37,861 p=22111 u=vagrant |   [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-21 04:47:38,499 p=22111 u=vagrant |  PLAY [all] *******************************************************************************************************************************************************************************************************
+2024-11-21 04:47:38,590 p=22111 u=vagrant |  TASK [Gathering Facts] *******************************************************************************************************************************************************************************************
+2024-11-21 04:47:40,503 p=22111 u=vagrant |  fatal: [no-existe.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname no-existe.com: Name or service not known\r\n", "unreachable": true}
+2024-11-21 04:47:43,064 p=22111 u=vagrant |  ok: [localhost]
+2024-11-21 04:47:43,131 p=22111 u=vagrant |  ok: [192.168.56.11]
+2024-11-21 04:47:43,200 p=22111 u=vagrant |  ok: [127.0.0.1]
+2024-11-21 04:47:44,701 p=22111 u=vagrant |  ok: [192.168.56.10]
+2024-11-21 04:47:50,942 p=22111 u=vagrant |  fatal: [no-existe2.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 200.200.200.1 port 22: Connection timed out\r\n", "unreachable": true}
+2024-11-21 04:47:51,058 p=22111 u=vagrant |  TASK [include_role] **********************************************************************************************************************************************************************************************
+2024-11-21 04:47:51,814 p=22111 u=vagrant |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/roles/Crear_Grupos_Dinamita/tasks/main.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: "Creo grupos"
+  ^ here
+
+2024-11-21 04:47:51,819 p=22111 u=vagrant |  	to retry, use: --limit @/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/playbook.retry
+
+2024-11-21 04:47:51,820 p=22111 u=vagrant |  PLAY RECAP *******************************************************************************************************************************************************************************************************
+2024-11-21 04:47:51,821 p=22111 u=vagrant |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:47:51,822 p=22111 u=vagrant |  192.168.56.10              : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:47:51,823 p=22111 u=vagrant |  192.168.56.11              : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:47:51,823 p=22111 u=vagrant |  localhost                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:47:51,824 p=22111 u=vagrant |  no-existe.com              : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 04:47:51,825 p=22111 u=vagrant |  no-existe2.com             : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 04:54:23,560 p=22414 u=vagrant |   [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-21 04:54:23,932 p=22414 u=vagrant |  PLAY [all] *******************************************************************************************************************************************************************************************************
+2024-11-21 04:54:23,993 p=22414 u=vagrant |  TASK [Gathering Facts] *******************************************************************************************************************************************************************************************
+2024-11-21 04:54:25,697 p=22414 u=vagrant |  fatal: [no-existe.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname no-existe.com: Name or service not known\r\n", "unreachable": true}
+2024-11-21 04:54:27,777 p=22414 u=vagrant |  ok: [localhost]
+2024-11-21 04:54:27,851 p=22414 u=vagrant |  ok: [127.0.0.1]
+2024-11-21 04:54:27,967 p=22414 u=vagrant |  ok: [192.168.56.11]
+2024-11-21 04:54:29,596 p=22414 u=vagrant |  ok: [192.168.56.10]
+2024-11-21 04:54:36,120 p=22414 u=vagrant |  fatal: [no-existe2.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 200.200.200.1 port 22: Connection timed out\r\n", "unreachable": true}
+2024-11-21 04:54:36,190 p=22414 u=vagrant |  TASK [include_role] **********************************************************************************************************************************************************************************************
+2024-11-21 04:54:36,989 p=22414 u=vagrant |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/roles/Crear_Grupos_Dinamita/tasks/main.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: "Creo grupos"
+  ^ here
+
+2024-11-21 04:54:36,994 p=22414 u=vagrant |  	to retry, use: --limit @/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/playbook.retry
+
+2024-11-21 04:54:36,994 p=22414 u=vagrant |  PLAY RECAP *******************************************************************************************************************************************************************************************************
+2024-11-21 04:54:36,995 p=22414 u=vagrant |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:54:36,995 p=22414 u=vagrant |  192.168.56.10              : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:54:36,996 p=22414 u=vagrant |  192.168.56.11              : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:54:36,996 p=22414 u=vagrant |  localhost                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 04:54:36,997 p=22414 u=vagrant |  no-existe.com              : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 04:54:36,997 p=22414 u=vagrant |  no-existe2.com             : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 05:04:02,637 p=22817 u=vagrant |   [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-21 05:04:02,879 p=22817 u=vagrant |  PLAY [all] *******************************************************************************************************************************************************************************************************
+2024-11-21 05:04:02,910 p=22817 u=vagrant |  TASK [Gathering Facts] *******************************************************************************************************************************************************************************************
+2024-11-21 05:04:03,775 p=22817 u=vagrant |  fatal: [no-existe.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname no-existe.com: Name or service not known\r\n", "unreachable": true}
+2024-11-21 05:04:04,404 p=22817 u=vagrant |  ok: [127.0.0.1]
+2024-11-21 05:04:04,449 p=22817 u=vagrant |  ok: [localhost]
+2024-11-21 05:04:04,571 p=22817 u=vagrant |  ok: [192.168.56.11]
+2024-11-21 05:04:05,160 p=22817 u=vagrant |  ok: [192.168.56.10]
+2024-11-21 05:04:13,973 p=22817 u=vagrant |  fatal: [no-existe2.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 200.200.200.1 port 22: Connection timed out\r\n", "unreachable": true}
+2024-11-21 05:04:14,006 p=22817 u=vagrant |  TASK [include_role] **********************************************************************************************************************************************************************************************
+2024-11-21 05:04:14,316 p=22817 u=vagrant |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/roles/Crear_Grupos_Dinamita/tasks/main.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: "Creo grupos"
+  ^ here
+
+2024-11-21 05:04:14,318 p=22817 u=vagrant |  	to retry, use: --limit @/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/playbook.retry
+
+2024-11-21 05:04:14,319 p=22817 u=vagrant |  PLAY RECAP *******************************************************************************************************************************************************************************************************
+2024-11-21 05:04:14,319 p=22817 u=vagrant |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 05:04:14,320 p=22817 u=vagrant |  192.168.56.10              : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 05:04:14,320 p=22817 u=vagrant |  192.168.56.11              : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 05:04:14,321 p=22817 u=vagrant |  localhost                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 05:04:14,321 p=22817 u=vagrant |  no-existe.com              : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 05:04:14,322 p=22817 u=vagrant |  no-existe2.com             : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 05:08:12,135 p=23104 u=vagrant |   [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-21 05:08:12,382 p=23104 u=vagrant |  PLAY [all] *******************************************************************************************************************************************************************************************************
+2024-11-21 05:08:12,413 p=23104 u=vagrant |  TASK [Gathering Facts] *******************************************************************************************************************************************************************************************
+2024-11-21 05:08:12,923 p=23104 u=vagrant |  fatal: [no-existe.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname no-existe.com: Name or service not known\r\n", "unreachable": true}
+2024-11-21 05:08:13,850 p=23104 u=vagrant |  ok: [127.0.0.1]
+2024-11-21 05:08:13,954 p=23104 u=vagrant |  ok: [localhost]
+2024-11-21 05:08:14,023 p=23104 u=vagrant |  ok: [192.168.56.11]
+2024-11-21 05:08:14,635 p=23104 u=vagrant |  ok: [192.168.56.10]
+2024-11-21 05:08:23,035 p=23104 u=vagrant |  fatal: [no-existe2.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 200.200.200.1 port 22: Connection timed out\r\n", "unreachable": true}
+2024-11-21 05:08:23,038 p=23104 u=vagrant |  	to retry, use: --limit @/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/playbook.retry
+
+2024-11-21 05:08:23,038 p=23104 u=vagrant |  PLAY RECAP *******************************************************************************************************************************************************************************************************
+2024-11-21 05:08:23,039 p=23104 u=vagrant |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 05:08:23,039 p=23104 u=vagrant |  192.168.56.10              : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 05:08:23,039 p=23104 u=vagrant |  192.168.56.11              : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 05:08:23,040 p=23104 u=vagrant |  localhost                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 05:08:23,040 p=23104 u=vagrant |  no-existe.com              : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 05:08:23,041 p=23104 u=vagrant |  no-existe2.com             : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 05:34:44,971 p=23455 u=vagrant |   [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-21 05:34:45,210 p=23455 u=vagrant |  PLAY [all] *******************************************************************************************************************************************************************************************************
+2024-11-21 05:34:45,248 p=23455 u=vagrant |  TASK [Gathering Facts] *******************************************************************************************************************************************************************************************
+2024-11-21 05:34:46,126 p=23455 u=vagrant |  fatal: [no-existe.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname no-existe.com: Name or service not known\r\n", "unreachable": true}
+2024-11-21 05:34:46,710 p=23455 u=vagrant |  ok: [localhost]
+2024-11-21 05:34:46,769 p=23455 u=vagrant |  ok: [127.0.0.1]
+2024-11-21 05:34:46,858 p=23455 u=vagrant |  ok: [192.168.56.11]
+2024-11-21 05:34:47,630 p=23455 u=vagrant |  ok: [192.168.56.10]
+2024-11-21 05:34:56,330 p=23455 u=vagrant |  fatal: [no-existe2.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 200.200.200.1 port 22: Connection timed out\r\n", "unreachable": true}
+2024-11-21 05:34:56,366 p=23455 u=vagrant |  TASK [include_role] **********************************************************************************************************************************************************************************************
+2024-11-21 05:34:56,686 p=23455 u=vagrant |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/roles/Crear_Grupos_Dinamita/tasks/main.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: "Creo grupos"
+  ^ here
+
+2024-11-21 05:34:56,688 p=23455 u=vagrant |  	to retry, use: --limit @/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/playbook.retry
+
+2024-11-21 05:34:56,688 p=23455 u=vagrant |  PLAY RECAP *******************************************************************************************************************************************************************************************************
+2024-11-21 05:34:56,689 p=23455 u=vagrant |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 05:34:56,689 p=23455 u=vagrant |  192.168.56.10              : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 05:34:56,690 p=23455 u=vagrant |  192.168.56.11              : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 05:34:56,690 p=23455 u=vagrant |  localhost                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 05:34:56,691 p=23455 u=vagrant |  no-existe.com              : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 05:34:56,691 p=23455 u=vagrant |  no-existe2.com             : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 05:48:11,756 p=23815 u=vagrant |  Using /home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/ansible.cfg as config file
+2024-11-21 05:48:11,773 p=23815 u=vagrant |   [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-21 05:48:12,016 p=23815 u=vagrant |  PLAY [all] *******************************************************************************************************************************************************************************************************
+2024-11-21 05:48:12,044 p=23815 u=vagrant |  TASK [Gathering Facts] *******************************************************************************************************************************************************************************************
+2024-11-21 05:48:12,915 p=23815 u=vagrant |  fatal: [no-existe.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname no-existe.com: Name or service not known\r\n", "unreachable": true}
+2024-11-21 05:48:13,521 p=23815 u=vagrant |  ok: [localhost]
+2024-11-21 05:48:13,569 p=23815 u=vagrant |  ok: [127.0.0.1]
+2024-11-21 05:48:13,605 p=23815 u=vagrant |  ok: [192.168.56.11]
+2024-11-21 05:48:14,271 p=23815 u=vagrant |  ok: [192.168.56.10]
+2024-11-21 05:48:23,093 p=23815 u=vagrant |  fatal: [no-existe2.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 200.200.200.1 port 22: Connection timed out\r\n", "unreachable": true}
+2024-11-21 05:48:23,138 p=23815 u=vagrant |  TASK [include_role] **********************************************************************************************************************************************************************************************
+2024-11-21 05:48:23,428 p=23815 u=vagrant |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/roles/Crear_Grupos_Dinamita/tasks/main.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: "Creo grupos"
+  ^ here
+
+2024-11-21 05:48:23,431 p=23815 u=vagrant |  	to retry, use: --limit @/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/playbook.retry
+
+2024-11-21 05:48:23,431 p=23815 u=vagrant |  PLAY RECAP *******************************************************************************************************************************************************************************************************
+2024-11-21 05:48:23,432 p=23815 u=vagrant |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 05:48:23,432 p=23815 u=vagrant |  192.168.56.10              : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 05:48:23,433 p=23815 u=vagrant |  192.168.56.11              : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 05:48:23,433 p=23815 u=vagrant |  localhost                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 05:48:23,434 p=23815 u=vagrant |  no-existe.com              : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 05:48:23,434 p=23815 u=vagrant |  no-existe2.com             : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 05:53:20,922 p=24117 u=vagrant |   [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-21 05:53:21,181 p=24117 u=vagrant |  PLAY [all] *******************************************************************************************************************************************************************************************************
+2024-11-21 05:53:21,214 p=24117 u=vagrant |  TASK [Gathering Facts] *******************************************************************************************************************************************************************************************
+2024-11-21 05:53:22,088 p=24117 u=vagrant |  fatal: [no-existe.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname no-existe.com: Name or service not known\r\n", "unreachable": true}
+2024-11-21 05:53:22,660 p=24117 u=vagrant |  ok: [localhost]
+2024-11-21 05:53:22,743 p=24117 u=vagrant |  ok: [127.0.0.1]
+2024-11-21 05:53:22,852 p=24117 u=vagrant |  ok: [192.168.56.11]
+2024-11-21 05:53:23,434 p=24117 u=vagrant |  ok: [192.168.56.10]
+2024-11-21 05:53:32,281 p=24117 u=vagrant |  fatal: [no-existe2.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 200.200.200.1 port 22: Connection timed out\r\n", "unreachable": true}
+2024-11-21 05:53:32,311 p=24117 u=vagrant |  TASK [include_role] **********************************************************************************************************************************************************************************************
+2024-11-21 05:53:32,592 p=24117 u=vagrant |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/roles/Crear_Grupos_Dinamita/tasks/main.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: "Crear_Grupos_Dinamita"
+  ^ here
+
+2024-11-21 05:53:32,594 p=24117 u=vagrant |  	to retry, use: --limit @/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/playbook.retry
+
+2024-11-21 05:53:32,595 p=24117 u=vagrant |  PLAY RECAP *******************************************************************************************************************************************************************************************************
+2024-11-21 05:53:32,595 p=24117 u=vagrant |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 05:53:32,596 p=24117 u=vagrant |  192.168.56.10              : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 05:53:32,596 p=24117 u=vagrant |  192.168.56.11              : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 05:53:32,596 p=24117 u=vagrant |  localhost                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 05:53:32,597 p=24117 u=vagrant |  no-existe.com              : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 05:53:32,597 p=24117 u=vagrant |  no-existe2.com             : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 05:57:28,206 p=24405 u=vagrant |  Using /home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/ansible.cfg as config file
+2024-11-21 05:57:28,223 p=24405 u=vagrant |   [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-21 05:57:28,452 p=24405 u=vagrant |  PLAY [all] *******************************************************************************************************************************************************************************************************
+2024-11-21 05:57:28,481 p=24405 u=vagrant |  TASK [Gathering Facts] *******************************************************************************************************************************************************************************************
+2024-11-21 05:57:29,424 p=24405 u=vagrant |  ok: [localhost]
+2024-11-21 05:57:29,454 p=24405 u=vagrant |  TASK [include_role] **********************************************************************************************************************************************************************************************
+2024-11-21 05:57:29,540 p=24405 u=vagrant |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/roles/Crear_Grupos_Dinamita/tasks/main.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: "Crear_Grupos_Dinamita"
+  ^ here
+
+2024-11-21 05:57:29,543 p=24405 u=vagrant |  	to retry, use: --limit @/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/playbook.retry
+
+2024-11-21 05:57:29,544 p=24405 u=vagrant |  PLAY RECAP *******************************************************************************************************************************************************************************************************
+2024-11-21 05:57:29,544 p=24405 u=vagrant |  localhost                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 06:04:26,524 p=24504 u=vagrant |   [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-21 06:04:26,750 p=24504 u=vagrant |  PLAY [all] *******************************************************************************************************************************************************************************************************
+2024-11-21 06:04:26,778 p=24504 u=vagrant |  TASK [Gathering Facts] *******************************************************************************************************************************************************************************************
+2024-11-21 06:04:27,649 p=24504 u=vagrant |  fatal: [no-existe.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname no-existe.com: Name or service not known\r\n", "unreachable": true}
+2024-11-21 06:04:28,167 p=24504 u=vagrant |  ok: [localhost]
+2024-11-21 06:04:28,199 p=24504 u=vagrant |  ok: [127.0.0.1]
+2024-11-21 06:04:28,340 p=24504 u=vagrant |  ok: [192.168.56.11]
+2024-11-21 06:04:28,874 p=24504 u=vagrant |  ok: [192.168.56.10]
+2024-11-21 06:04:37,783 p=24504 u=vagrant |  fatal: [no-existe2.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 200.200.200.1 port 22: Connection timed out\r\n", "unreachable": true}
+2024-11-21 06:04:37,827 p=24504 u=vagrant |  TASK [include_role] **********************************************************************************************************************************************************************************************
+2024-11-21 06:04:38,122 p=24504 u=vagrant |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/roles/Crear_Grupos_Dinamita/tasks/main.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: "Crear_Grupos_Dinamita"
+  ^ here
+
+2024-11-21 06:04:38,124 p=24504 u=vagrant |  	to retry, use: --limit @/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/playbook.retry
+
+2024-11-21 06:04:38,125 p=24504 u=vagrant |  PLAY RECAP *******************************************************************************************************************************************************************************************************
+2024-11-21 06:04:38,126 p=24504 u=vagrant |  127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 06:04:38,126 p=24504 u=vagrant |  192.168.56.10              : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 06:04:38,127 p=24504 u=vagrant |  192.168.56.11              : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 06:04:38,127 p=24504 u=vagrant |  localhost                  : ok=1    changed=0    unreachable=0    failed=0   
+2024-11-21 06:04:38,128 p=24504 u=vagrant |  no-existe.com              : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 06:04:38,129 p=24504 u=vagrant |  no-existe2.com             : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 06:10:24,828 p=24812 u=vagrant |   [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-21 06:10:25,066 p=24812 u=vagrant |  PLAY [all] *******************************************************************************************************************************************************************************************************
+2024-11-21 06:10:25,096 p=24812 u=vagrant |  TASK [Gathering Facts] *******************************************************************************************************************************************************************************************
+2024-11-21 06:10:26,005 p=24812 u=vagrant |  fatal: [no-existe.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname no-existe.com: Name or service not known\r\n", "unreachable": true}
+2024-11-21 06:10:26,478 p=24812 u=vagrant |  ok: [127.0.0.1]
+2024-11-21 06:10:26,538 p=24812 u=vagrant |  ok: [localhost]
+2024-11-21 06:10:26,645 p=24812 u=vagrant |  ok: [192.168.56.11]
+2024-11-21 06:10:27,236 p=24812 u=vagrant |  ok: [192.168.56.10]
+2024-11-21 06:10:36,151 p=24812 u=vagrant |  fatal: [no-existe2.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 200.200.200.1 port 22: Connection timed out\r\n", "unreachable": true}
+2024-11-21 06:10:36,183 p=24812 u=vagrant |  TASK [include_role] **********************************************************************************************************************************************************************************************
+2024-11-21 06:10:36,503 p=24812 u=vagrant |  TASK [Instala-tools_Dinamita : Rol: Instala-tools_Dinamita - Grupo: Dinamita] ************************************************************************************************************************************
+2024-11-21 06:10:36,544 p=24812 u=vagrant |  ok: [127.0.0.1] => {
+    "msg": "Inicio de tareas dentro del Rol: Instala-tools_Dinamita"
+}
+2024-11-21 06:10:36,624 p=24812 u=vagrant |  ok: [192.168.56.10] => {
+    "msg": "Inicio de tareas dentro del Rol: Instala-tools_Dinamita"
+}
+2024-11-21 06:10:36,635 p=24812 u=vagrant |  ok: [192.168.56.11] => {
+    "msg": "Inicio de tareas dentro del Rol: Instala-tools_Dinamita"
+}
+2024-11-21 06:10:36,661 p=24812 u=vagrant |  ok: [localhost] => {
+    "msg": "Inicio de tareas dentro del Rol: Instala-tools_Dinamita"
+}
+2024-11-21 06:10:36,698 p=24812 u=vagrant |  TASK [Instala-tools_Dinamita : Instala herramientas] *************************************************************************************************************************************************************
+2024-11-21 06:10:38,385 p=24812 u=vagrant |  ok: [localhost]
+2024-11-21 06:10:38,400 p=24812 u=vagrant |  ok: [127.0.0.1]
+2024-11-21 06:10:38,540 p=24812 u=vagrant |  ok: [192.168.56.10]
+2024-11-21 06:10:40,521 p=24812 u=vagrant |  ok: [192.168.56.11]
+2024-11-21 06:10:40,552 p=24812 u=vagrant |  TASK [include_role] **********************************************************************************************************************************************************************************************
+2024-11-21 06:10:40,834 p=24812 u=vagrant |  TASK [TP_INI : Rol: TP_INI - Grupo: Dinamita] ********************************************************************************************************************************************************************
+2024-11-21 06:10:40,877 p=24812 u=vagrant |  ok: [127.0.0.1] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2024-11-21 06:10:40,956 p=24812 u=vagrant |  ok: [192.168.56.10] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2024-11-21 06:10:40,967 p=24812 u=vagrant |  ok: [192.168.56.11] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2024-11-21 06:10:40,995 p=24812 u=vagrant |  ok: [localhost] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2024-11-21 06:10:41,030 p=24812 u=vagrant |  TASK [TP_INI : Creo directorio para el archivo] ******************************************************************************************************************************************************************
+2024-11-21 06:10:41,548 p=24812 u=vagrant |  changed: [localhost]
+2024-11-21 06:10:41,578 p=24812 u=vagrant |  ok: [127.0.0.1]
+2024-11-21 06:10:41,663 p=24812 u=vagrant |  ok: [192.168.56.10]
+2024-11-21 06:10:41,765 p=24812 u=vagrant |  changed: [192.168.56.11]
+2024-11-21 06:10:41,798 p=24812 u=vagrant |  TASK [TP_INI : Creo el archivo desde template] *******************************************************************************************************************************************************************
+2024-11-21 06:10:42,789 p=24812 u=vagrant |  changed: [localhost]
+2024-11-21 06:10:42,807 p=24812 u=vagrant |  ok: [127.0.0.1]
+2024-11-21 06:10:42,862 p=24812 u=vagrant |  ok: [192.168.56.10]
+2024-11-21 06:10:42,938 p=24812 u=vagrant |  changed: [192.168.56.11]
+2024-11-21 06:10:42,970 p=24812 u=vagrant |  TASK [include_role] **********************************************************************************************************************************************************************************************
+2024-11-21 06:10:43,246 p=24812 u=vagrant |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/roles/Alta_Usuarios_Dinamita/tasks/main.yml': line 8, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: "Crea usuario R1"
+  ^ here
+
+2024-11-21 06:10:43,248 p=24812 u=vagrant |  	to retry, use: --limit @/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/playbook.retry
+
+2024-11-21 06:10:43,248 p=24812 u=vagrant |  PLAY RECAP *******************************************************************************************************************************************************************************************************
+2024-11-21 06:10:43,249 p=24812 u=vagrant |  127.0.0.1                  : ok=6    changed=0    unreachable=0    failed=0   
+2024-11-21 06:10:43,249 p=24812 u=vagrant |  192.168.56.10              : ok=6    changed=0    unreachable=0    failed=0   
+2024-11-21 06:10:43,250 p=24812 u=vagrant |  192.168.56.11              : ok=6    changed=2    unreachable=0    failed=0   
+2024-11-21 06:10:43,250 p=24812 u=vagrant |  localhost                  : ok=6    changed=2    unreachable=0    failed=0   
+2024-11-21 06:10:43,251 p=24812 u=vagrant |  no-existe.com              : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 06:10:43,251 p=24812 u=vagrant |  no-existe2.com             : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 06:18:44,314 p=25497 u=vagrant |  ansible-playbook 2.5.1
+  config file = /home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/dist-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.17 (default, Mar  8 2023, 18:40:28) [GCC 7.5.0]
+2024-11-21 06:18:44,314 p=25497 u=vagrant |  Using /home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/ansible.cfg as config file
+2024-11-21 06:18:44,333 p=25497 u=vagrant |   [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-21 06:18:44,333 p=25497 u=vagrant |  Parsed /home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/inventory/hosts inventory source with ini plugin
+2024-11-21 06:18:44,542 p=25497 u=vagrant |  PLAYBOOK: playbook.yml *******************************************************************************************************************************************************************************************
+2024-11-21 06:18:44,543 p=25497 u=vagrant |  1 plays in playbook.yml
+2024-11-21 06:18:44,569 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:44,572 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:44,572 p=25497 u=vagrant |  PLAY [all] *******************************************************************************************************************************************************************************************************
+2024-11-21 06:18:44,605 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:44,606 p=25497 u=vagrant |  TASK [Gathering Facts] *******************************************************************************************************************************************************************************************
+2024-11-21 06:18:44,606 p=25497 u=vagrant |  task path: /home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/playbook.yml:2
+2024-11-21 06:18:44,616 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:44,626 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:44,646 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:44,657 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:44,680 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:45,092 p=25497 u=vagrant |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/system/setup.py
+2024-11-21 06:18:45,092 p=25497 u=vagrant |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/system/setup.py
+2024-11-21 06:18:45,093 p=25497 u=vagrant |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/system/setup.py
+2024-11-21 06:18:45,093 p=25497 u=vagrant |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/system/setup.py
+2024-11-21 06:18:45,104 p=25497 u=vagrant |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/system/setup.py
+2024-11-21 06:18:45,495 p=25497 u=vagrant |  fatal: [no-existe.com]: UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname no-existe.com: Name or service not known\r\n", 
+    "unreachable": true
+}
+2024-11-21 06:18:45,695 p=25497 u=vagrant |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/system/setup.py
+2024-11-21 06:18:46,196 p=25497 u=vagrant |  ok: [localhost]
+2024-11-21 06:18:46,277 p=25497 u=vagrant |  ok: [127.0.0.1]
+2024-11-21 06:18:46,351 p=25497 u=vagrant |  ok: [192.168.56.11]
+2024-11-21 06:18:46,990 p=25497 u=vagrant |  ok: [192.168.56.10]
+2024-11-21 06:18:55,743 p=25497 u=vagrant |  fatal: [no-existe2.com]: UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 200.200.200.1 port 22: Connection timed out\r\n", 
+    "unreachable": true
+}
+2024-11-21 06:18:55,744 p=25497 u=vagrant |  META: ran handlers
+2024-11-21 06:18:55,773 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:55,774 p=25497 u=vagrant |  TASK [include_role] **********************************************************************************************************************************************************************************************
+2024-11-21 06:18:55,774 p=25497 u=vagrant |  task path: /home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/playbook.yml:12
+2024-11-21 06:18:55,843 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:55,879 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:55,916 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:55,961 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:55,995 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:56,023 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:56,054 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:56,059 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:56,104 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:56,139 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:56,141 p=25497 u=vagrant |  TASK [Instala-tools_Dinamita : Rol: Instala-tools_Dinamita - Grupo: Dinamita] ************************************************************************************************************************************
+2024-11-21 06:18:56,141 p=25497 u=vagrant |  task path: /home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/roles/Instala-tools_Dinamita/tasks/main.yml:4
+2024-11-21 06:18:56,182 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:56,189 p=25497 u=vagrant |  ok: [127.0.0.1] => {
+    "msg": "Inicio de tareas dentro del Rol: Instala-tools_Dinamita"
+}
+2024-11-21 06:18:56,222 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:56,274 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:56,280 p=25497 u=vagrant |  ok: [192.168.56.10] => {
+    "msg": "Inicio de tareas dentro del Rol: Instala-tools_Dinamita"
+}
+2024-11-21 06:18:56,286 p=25497 u=vagrant |  ok: [192.168.56.11] => {
+    "msg": "Inicio de tareas dentro del Rol: Instala-tools_Dinamita"
+}
+2024-11-21 06:18:56,321 p=25497 u=vagrant |  ok: [localhost] => {
+    "msg": "Inicio de tareas dentro del Rol: Instala-tools_Dinamita"
+}
+2024-11-21 06:18:56,355 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:56,357 p=25497 u=vagrant |  TASK [Instala-tools_Dinamita : Instala herramientas] *************************************************************************************************************************************************************
+2024-11-21 06:18:56,357 p=25497 u=vagrant |  task path: /home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/roles/Instala-tools_Dinamita/tasks/main.yml:8
+2024-11-21 06:18:56,397 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:56,469 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:56,550 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:18:56,627 p=25497 u=vagrant |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/packaging/os/apt.py
+2024-11-21 06:18:56,634 p=25497 u=vagrant |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/packaging/os/apt.py
+2024-11-21 06:18:56,650 p=25497 u=vagrant |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/packaging/os/apt.py
+2024-11-21 06:18:56,819 p=25497 u=vagrant |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/packaging/os/dnf.py
+2024-11-21 06:18:56,886 p=25497 u=vagrant |  Escalation succeeded
+2024-11-21 06:18:57,174 p=25497 u=vagrant |  Escalation succeeded
+2024-11-21 06:18:58,097 p=25497 u=vagrant |  ok: [localhost] => {
+    "cache_update_time": 1732149146, 
+    "cache_updated": false, 
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "allow_unauthenticated": false, 
+            "autoclean": false, 
+            "autoremove": false, 
+            "cache_valid_time": 0, 
+            "deb": null, 
+            "default_release": null, 
+            "dpkg_options": "force-confdef,force-confold", 
+            "force": false, 
+            "force_apt_get": false, 
+            "install_recommends": null, 
+            "name": [
+                "htop", 
+                "tmux", 
+                "speedtest-cli", 
+                "ansible", 
+                "git", 
+                "sshpass"
+            ], 
+            "only_upgrade": false, 
+            "package": [
+                "htop", 
+                "tmux", 
+                "speedtest-cli", 
+                "ansible", 
+                "git", 
+                "sshpass"
+            ], 
+            "purge": false, 
+            "state": "present", 
+            "update_cache": null, 
+            "upgrade": null
+        }
+    }
+}
+2024-11-21 06:18:58,274 p=25497 u=vagrant |  ok: [127.0.0.1] => {
+    "cache_update_time": 1732149146, 
+    "cache_updated": false, 
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "allow_unauthenticated": false, 
+            "autoclean": false, 
+            "autoremove": false, 
+            "cache_valid_time": 0, 
+            "deb": null, 
+            "default_release": null, 
+            "dpkg_options": "force-confdef,force-confold", 
+            "force": false, 
+            "force_apt_get": false, 
+            "install_recommends": null, 
+            "name": [
+                "htop", 
+                "tmux", 
+                "speedtest-cli", 
+                "ansible", 
+                "git", 
+                "sshpass"
+            ], 
+            "only_upgrade": false, 
+            "package": [
+                "htop", 
+                "tmux", 
+                "speedtest-cli", 
+                "ansible", 
+                "git", 
+                "sshpass"
+            ], 
+            "purge": false, 
+            "state": "present", 
+            "update_cache": null, 
+            "upgrade": null
+        }
+    }
+}
+2024-11-21 06:18:58,276 p=25497 u=vagrant |  ok: [192.168.56.10] => {
+    "cache_update_time": 1732149146, 
+    "cache_updated": false, 
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "allow_unauthenticated": false, 
+            "autoclean": false, 
+            "autoremove": false, 
+            "cache_valid_time": 0, 
+            "deb": null, 
+            "default_release": null, 
+            "dpkg_options": "force-confdef,force-confold", 
+            "force": false, 
+            "force_apt_get": false, 
+            "install_recommends": null, 
+            "name": [
+                "htop", 
+                "tmux", 
+                "speedtest-cli", 
+                "ansible", 
+                "git", 
+                "sshpass"
+            ], 
+            "only_upgrade": false, 
+            "package": [
+                "htop", 
+                "tmux", 
+                "speedtest-cli", 
+                "ansible", 
+                "git", 
+                "sshpass"
+            ], 
+            "purge": false, 
+            "state": "present", 
+            "update_cache": null, 
+            "upgrade": null
+        }
+    }
+}
+2024-11-21 06:19:00,370 p=25497 u=vagrant |  ok: [192.168.56.11] => {
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "autoremove": null, 
+            "conf_file": null, 
+            "disable_gpg_check": false, 
+            "disablerepo": [], 
+            "enablerepo": [], 
+            "installroot": "/", 
+            "list": null, 
+            "name": [
+                "htop", 
+                "tmux", 
+                "speedtest-cli", 
+                "ansible", 
+                "git", 
+                "sshpass"
+            ], 
+            "state": "present"
+        }
+    }, 
+    "msg": "Nothing to do"
+}
+2024-11-21 06:19:00,402 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:00,404 p=25497 u=vagrant |  TASK [include_role] **********************************************************************************************************************************************************************************************
+2024-11-21 06:19:00,404 p=25497 u=vagrant |  task path: /home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/playbook.yml:15
+2024-11-21 06:19:00,442 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:00,479 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:00,519 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:00,567 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:00,601 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:00,641 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:00,688 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:00,693 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:00,706 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:00,746 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:00,748 p=25497 u=vagrant |  TASK [TP_INI : Rol: TP_INI - Grupo: Dinamita] ********************************************************************************************************************************************************************
+2024-11-21 06:19:00,748 p=25497 u=vagrant |  task path: /home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/roles/TP_INI/tasks/main.yml:4
+2024-11-21 06:19:00,786 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:00,792 p=25497 u=vagrant |  ok: [127.0.0.1] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2024-11-21 06:19:00,826 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:00,872 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:00,878 p=25497 u=vagrant |  ok: [192.168.56.10] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2024-11-21 06:19:00,892 p=25497 u=vagrant |  ok: [192.168.56.11] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2024-11-21 06:19:00,924 p=25497 u=vagrant |  ok: [localhost] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2024-11-21 06:19:00,959 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:00,960 p=25497 u=vagrant |  TASK [TP_INI : Creo directorio para el archivo] ******************************************************************************************************************************************************************
+2024-11-21 06:19:00,961 p=25497 u=vagrant |  task path: /home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/roles/TP_INI/tasks/main.yml:8
+2024-11-21 06:19:01,004 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:01,073 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:01,129 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:01,251 p=25497 u=vagrant |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/files/file.py
+2024-11-21 06:19:01,252 p=25497 u=vagrant |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/files/file.py
+2024-11-21 06:19:01,256 p=25497 u=vagrant |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/files/file.py
+2024-11-21 06:19:01,258 p=25497 u=vagrant |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/files/file.py
+2024-11-21 06:19:01,591 p=25497 u=vagrant |  ok: [localhost] => {
+    "changed": false, 
+    "diff": {
+        "after": {
+            "path": "/tmp/Grupo"
+        }, 
+        "before": {
+            "path": "/tmp/Grupo"
+        }
+    }, 
+    "gid": 1000, 
+    "group": "vagrant", 
+    "invocation": {
+        "module_args": {
+            "attributes": null, 
+            "backup": null, 
+            "content": null, 
+            "delimiter": null, 
+            "diff_peek": null, 
+            "directory_mode": null, 
+            "follow": false, 
+            "force": false, 
+            "group": null, 
+            "mode": null, 
+            "original_basename": null, 
+            "owner": "vagrant", 
+            "path": "/tmp/Grupo", 
+            "recurse": false, 
+            "regexp": null, 
+            "remote_src": null, 
+            "selevel": null, 
+            "serole": null, 
+            "setype": null, 
+            "seuser": null, 
+            "src": null, 
+            "state": "directory", 
+            "unsafe_writes": null, 
+            "validate": null
+        }
+    }, 
+    "mode": "0775", 
+    "owner": "vagrant", 
+    "path": "/tmp/Grupo", 
+    "size": 4096, 
+    "state": "directory", 
+    "uid": 1000
+}
+2024-11-21 06:19:01,620 p=25497 u=vagrant |  ok: [127.0.0.1] => {
+    "changed": false, 
+    "diff": {
+        "after": {
+            "path": "/tmp/Grupo"
+        }, 
+        "before": {
+            "path": "/tmp/Grupo"
+        }
+    }, 
+    "gid": 1000, 
+    "group": "vagrant", 
+    "invocation": {
+        "module_args": {
+            "attributes": null, 
+            "backup": null, 
+            "content": null, 
+            "delimiter": null, 
+            "diff_peek": null, 
+            "directory_mode": null, 
+            "follow": false, 
+            "force": false, 
+            "group": null, 
+            "mode": null, 
+            "original_basename": null, 
+            "owner": "vagrant", 
+            "path": "/tmp/Grupo", 
+            "recurse": false, 
+            "regexp": null, 
+            "remote_src": null, 
+            "selevel": null, 
+            "serole": null, 
+            "setype": null, 
+            "seuser": null, 
+            "src": null, 
+            "state": "directory", 
+            "unsafe_writes": null, 
+            "validate": null
+        }
+    }, 
+    "mode": "0775", 
+    "owner": "vagrant", 
+    "path": "/tmp/Grupo", 
+    "size": 4096, 
+    "state": "directory", 
+    "uid": 1000
+}
+2024-11-21 06:19:01,702 p=25497 u=vagrant |  ok: [192.168.56.10] => {
+    "changed": false, 
+    "diff": {
+        "after": {
+            "path": "/tmp/Grupo"
+        }, 
+        "before": {
+            "path": "/tmp/Grupo"
+        }
+    }, 
+    "gid": 1000, 
+    "group": "vagrant", 
+    "invocation": {
+        "module_args": {
+            "attributes": null, 
+            "backup": null, 
+            "content": null, 
+            "delimiter": null, 
+            "diff_peek": null, 
+            "directory_mode": null, 
+            "follow": false, 
+            "force": false, 
+            "group": null, 
+            "mode": null, 
+            "original_basename": null, 
+            "owner": "vagrant", 
+            "path": "/tmp/Grupo", 
+            "recurse": false, 
+            "regexp": null, 
+            "remote_src": null, 
+            "selevel": null, 
+            "serole": null, 
+            "setype": null, 
+            "seuser": null, 
+            "src": null, 
+            "state": "directory", 
+            "unsafe_writes": null, 
+            "validate": null
+        }
+    }, 
+    "mode": "0775", 
+    "owner": "vagrant", 
+    "path": "/tmp/Grupo", 
+    "size": 4096, 
+    "state": "directory", 
+    "uid": 1000
+}
+2024-11-21 06:19:01,804 p=25497 u=vagrant |  ok: [192.168.56.11] => {
+    "changed": false, 
+    "diff": {
+        "after": {
+            "path": "/tmp/Grupo"
+        }, 
+        "before": {
+            "path": "/tmp/Grupo"
+        }
+    }, 
+    "gid": 1000, 
+    "group": "vagrant", 
+    "invocation": {
+        "module_args": {
+            "attributes": null, 
+            "backup": null, 
+            "content": null, 
+            "delimiter": null, 
+            "diff_peek": null, 
+            "directory_mode": null, 
+            "follow": false, 
+            "force": false, 
+            "group": null, 
+            "mode": null, 
+            "original_basename": null, 
+            "owner": "vagrant", 
+            "path": "/tmp/Grupo", 
+            "recurse": false, 
+            "regexp": null, 
+            "remote_src": null, 
+            "selevel": null, 
+            "serole": null, 
+            "setype": null, 
+            "seuser": null, 
+            "src": null, 
+            "state": "directory", 
+            "unsafe_writes": null, 
+            "validate": null
+        }
+    }, 
+    "mode": "0775", 
+    "owner": "vagrant", 
+    "path": "/tmp/Grupo", 
+    "secontext": "unconfined_u:object_r:user_tmp_t:s0", 
+    "size": 23, 
+    "state": "directory", 
+    "uid": 1000
+}
+2024-11-21 06:19:01,838 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:01,840 p=25497 u=vagrant |  TASK [TP_INI : Creo el archivo desde template] *******************************************************************************************************************************************************************
+2024-11-21 06:19:01,840 p=25497 u=vagrant |  task path: /home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/roles/TP_INI/tasks/main.yml:14
+2024-11-21 06:19:01,880 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:01,925 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:02,008 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:02,240 p=25497 u=vagrant |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/files/stat.py
+2024-11-21 06:19:02,242 p=25497 u=vagrant |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/files/stat.py
+2024-11-21 06:19:02,249 p=25497 u=vagrant |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/files/stat.py
+2024-11-21 06:19:02,251 p=25497 u=vagrant |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/files/stat.py
+2024-11-21 06:19:02,495 p=25497 u=vagrant |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/files/file.py
+2024-11-21 06:19:02,550 p=25497 u=vagrant |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/files/file.py
+2024-11-21 06:19:02,621 p=25497 u=vagrant |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/files/file.py
+2024-11-21 06:19:02,622 p=25497 u=vagrant |  Using module file /usr/lib/python2.7/dist-packages/ansible/modules/files/file.py
+2024-11-21 06:19:02,789 p=25497 u=vagrant |  ok: [127.0.0.1] => {
+    "changed": false, 
+    "checksum": "149e54557d18c1d31a1b6176875892b4b952cd5d", 
+    "dest": "/tmp/Grupo/datos.txt", 
+    "diff": {
+        "after": {
+            "path": "/tmp/Grupo/datos.txt"
+        }, 
+        "before": {
+            "path": "/tmp/Grupo/datos.txt"
+        }
+    }, 
+    "gid": 1000, 
+    "group": "vagrant", 
+    "invocation": {
+        "module_args": {
+            "attributes": null, 
+            "backup": null, 
+            "content": null, 
+            "delimiter": null, 
+            "dest": "/tmp/Grupo/datos.txt", 
+            "diff_peek": null, 
+            "directory_mode": null, 
+            "follow": false, 
+            "force": false, 
+            "group": null, 
+            "mode": null, 
+            "original_basename": "template_01.j2", 
+            "owner": "vagrant", 
+            "path": "/tmp/Grupo/datos.txt", 
+            "recurse": false, 
+            "regexp": null, 
+            "remote_src": null, 
+            "selevel": null, 
+            "serole": null, 
+            "setype": null, 
+            "seuser": null, 
+            "src": "template_01.j2", 
+            "state": "file", 
+            "unsafe_writes": null, 
+            "validate": null
+        }
+    }, 
+    "mode": "0664", 
+    "owner": "vagrant", 
+    "path": "/tmp/Grupo/datos.txt", 
+    "size": 410, 
+    "state": "file", 
+    "uid": 1000
+}
+2024-11-21 06:19:02,845 p=25497 u=vagrant |  ok: [localhost] => {
+    "changed": false, 
+    "checksum": "149e54557d18c1d31a1b6176875892b4b952cd5d", 
+    "dest": "/tmp/Grupo/datos.txt", 
+    "diff": {
+        "after": {
+            "path": "/tmp/Grupo/datos.txt"
+        }, 
+        "before": {
+            "path": "/tmp/Grupo/datos.txt"
+        }
+    }, 
+    "gid": 1000, 
+    "group": "vagrant", 
+    "invocation": {
+        "module_args": {
+            "attributes": null, 
+            "backup": null, 
+            "content": null, 
+            "delimiter": null, 
+            "dest": "/tmp/Grupo/datos.txt", 
+            "diff_peek": null, 
+            "directory_mode": null, 
+            "follow": false, 
+            "force": false, 
+            "group": null, 
+            "mode": null, 
+            "original_basename": "template_01.j2", 
+            "owner": "vagrant", 
+            "path": "/tmp/Grupo/datos.txt", 
+            "recurse": false, 
+            "regexp": null, 
+            "remote_src": null, 
+            "selevel": null, 
+            "serole": null, 
+            "setype": null, 
+            "seuser": null, 
+            "src": "template_01.j2", 
+            "state": "file", 
+            "unsafe_writes": null, 
+            "validate": null
+        }
+    }, 
+    "mode": "0664", 
+    "owner": "vagrant", 
+    "path": "/tmp/Grupo/datos.txt", 
+    "size": 410, 
+    "state": "file", 
+    "uid": 1000
+}
+2024-11-21 06:19:02,946 p=25497 u=vagrant |  ok: [192.168.56.10] => {
+    "changed": false, 
+    "checksum": "149e54557d18c1d31a1b6176875892b4b952cd5d", 
+    "dest": "/tmp/Grupo/datos.txt", 
+    "diff": {
+        "after": {
+            "path": "/tmp/Grupo/datos.txt"
+        }, 
+        "before": {
+            "path": "/tmp/Grupo/datos.txt"
+        }
+    }, 
+    "gid": 1000, 
+    "group": "vagrant", 
+    "invocation": {
+        "module_args": {
+            "attributes": null, 
+            "backup": null, 
+            "content": null, 
+            "delimiter": null, 
+            "dest": "/tmp/Grupo/datos.txt", 
+            "diff_peek": null, 
+            "directory_mode": null, 
+            "follow": false, 
+            "force": false, 
+            "group": null, 
+            "mode": null, 
+            "original_basename": "template_01.j2", 
+            "owner": "vagrant", 
+            "path": "/tmp/Grupo/datos.txt", 
+            "recurse": false, 
+            "regexp": null, 
+            "remote_src": null, 
+            "selevel": null, 
+            "serole": null, 
+            "setype": null, 
+            "seuser": null, 
+            "src": "template_01.j2", 
+            "state": "file", 
+            "unsafe_writes": null, 
+            "validate": null
+        }
+    }, 
+    "mode": "0664", 
+    "owner": "vagrant", 
+    "path": "/tmp/Grupo/datos.txt", 
+    "size": 410, 
+    "state": "file", 
+    "uid": 1000
+}
+2024-11-21 06:19:03,064 p=25497 u=vagrant |  ok: [192.168.56.11] => {
+    "changed": false, 
+    "checksum": "776cf6f4d427a235de7e669e9cc944dfb558041f", 
+    "dest": "/tmp/Grupo/datos.txt", 
+    "diff": {
+        "after": {
+            "path": "/tmp/Grupo/datos.txt"
+        }, 
+        "before": {
+            "path": "/tmp/Grupo/datos.txt"
+        }
+    }, 
+    "gid": 1000, 
+    "group": "vagrant", 
+    "invocation": {
+        "module_args": {
+            "attributes": null, 
+            "backup": null, 
+            "content": null, 
+            "delimiter": null, 
+            "dest": "/tmp/Grupo/datos.txt", 
+            "diff_peek": null, 
+            "directory_mode": null, 
+            "follow": false, 
+            "force": false, 
+            "group": null, 
+            "mode": null, 
+            "original_basename": "template_01.j2", 
+            "owner": "vagrant", 
+            "path": "/tmp/Grupo/datos.txt", 
+            "recurse": false, 
+            "regexp": null, 
+            "remote_src": null, 
+            "selevel": null, 
+            "serole": null, 
+            "setype": null, 
+            "seuser": null, 
+            "src": "template_01.j2", 
+            "state": "file", 
+            "unsafe_writes": null, 
+            "validate": null
+        }
+    }, 
+    "mode": "0664", 
+    "owner": "vagrant", 
+    "path": "/tmp/Grupo/datos.txt", 
+    "secontext": "unconfined_u:object_r:user_home_t:s0", 
+    "size": 410, 
+    "state": "file", 
+    "uid": 1000
+}
+2024-11-21 06:19:03,099 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:03,100 p=25497 u=vagrant |  TASK [include_role] **********************************************************************************************************************************************************************************************
+2024-11-21 06:19:03,100 p=25497 u=vagrant |  task path: /home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/playbook.yml:18
+2024-11-21 06:19:03,138 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:03,177 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:03,217 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:03,278 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:03,316 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:03,350 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:03,387 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:03,399 p=25497 u=vagrant |  Read vars_file 'vars/main.yml'
+2024-11-21 06:19:03,447 p=25497 u=vagrant |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/roles/Alta_Usuarios_Dinamita/tasks/main.yml': line 8, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: "Crea usuario R1"
+  ^ here
+
+2024-11-21 06:19:03,449 p=25497 u=vagrant |  	to retry, use: --limit @/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/playbook.retry
+
+2024-11-21 06:19:03,450 p=25497 u=vagrant |  PLAY RECAP *******************************************************************************************************************************************************************************************************
+2024-11-21 06:19:03,450 p=25497 u=vagrant |  127.0.0.1                  : ok=6    changed=0    unreachable=0    failed=0   
+2024-11-21 06:19:03,450 p=25497 u=vagrant |  192.168.56.10              : ok=6    changed=0    unreachable=0    failed=0   
+2024-11-21 06:19:03,451 p=25497 u=vagrant |  192.168.56.11              : ok=6    changed=0    unreachable=0    failed=0   
+2024-11-21 06:19:03,451 p=25497 u=vagrant |  localhost                  : ok=6    changed=0    unreachable=0    failed=0   
+2024-11-21 06:19:03,451 p=25497 u=vagrant |  no-existe.com              : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 06:19:03,451 p=25497 u=vagrant |  no-existe2.com             : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 14:53:11,287 p=26544 u=vagrant |   [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-21 14:53:11,943 p=26544 u=vagrant |  PLAY [all] *******************************************************************************************************************************
+2024-11-21 14:53:12,026 p=26544 u=vagrant |  TASK [Gathering Facts] *******************************************************************************************************************
+2024-11-21 14:53:13,409 p=26544 u=vagrant |  fatal: [no-existe.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname no-existe.com: Name or service not known\r\n", "unreachable": true}
+2024-11-21 14:53:15,794 p=26544 u=vagrant |  ok: [localhost]
+2024-11-21 14:53:15,885 p=26544 u=vagrant |  ok: [127.0.0.1]
+2024-11-21 14:53:16,106 p=26544 u=vagrant |  ok: [192.168.56.11]
+2024-11-21 14:53:17,704 p=26544 u=vagrant |  ok: [192.168.56.10]
+2024-11-21 14:53:23,841 p=26544 u=vagrant |  fatal: [no-existe2.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 200.200.200.1 port 22: Connection timed out\r\n", "unreachable": true}
+2024-11-21 14:53:23,907 p=26544 u=vagrant |  TASK [include_role] **********************************************************************************************************************
+2024-11-21 14:53:24,734 p=26544 u=vagrant |  TASK [Instala-tools_Dinamita : Rol: Instala-tools_Dinamita - Grupo: Dinamita] ************************************************************
+2024-11-21 14:53:24,855 p=26544 u=vagrant |  ok: [127.0.0.1] => {
+    "msg": "Inicio de tareas dentro del Rol: Instala-tools_Dinamita"
+}
+2024-11-21 14:53:25,082 p=26544 u=vagrant |  ok: [192.168.56.10] => {
+    "msg": "Inicio de tareas dentro del Rol: Instala-tools_Dinamita"
+}
+2024-11-21 14:53:25,117 p=26544 u=vagrant |  ok: [192.168.56.11] => {
+    "msg": "Inicio de tareas dentro del Rol: Instala-tools_Dinamita"
+}
+2024-11-21 14:53:25,155 p=26544 u=vagrant |  ok: [localhost] => {
+    "msg": "Inicio de tareas dentro del Rol: Instala-tools_Dinamita"
+}
+2024-11-21 14:53:25,222 p=26544 u=vagrant |  TASK [Instala-tools_Dinamita : Instala herramientas] *************************************************************************************
+2024-11-21 14:53:29,475 p=26544 u=vagrant |  ok: [localhost]
+2024-11-21 14:53:29,897 p=26544 u=vagrant |  ok: [127.0.0.1]
+2024-11-21 14:53:30,350 p=26544 u=vagrant |  ok: [192.168.56.10]
+2024-11-21 14:53:36,285 p=26544 u=vagrant |  ok: [192.168.56.11]
+2024-11-21 14:53:36,366 p=26544 u=vagrant |  TASK [include_role] **********************************************************************************************************************
+2024-11-21 14:53:37,164 p=26544 u=vagrant |  TASK [TP_INI : Rol: TP_INI - Grupo: Dinamita] ********************************************************************************************
+2024-11-21 14:53:37,415 p=26544 u=vagrant |  ok: [127.0.0.1] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2024-11-21 14:53:37,554 p=26544 u=vagrant |  ok: [192.168.56.10] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2024-11-21 14:53:37,615 p=26544 u=vagrant |  ok: [192.168.56.11] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2024-11-21 14:53:37,680 p=26544 u=vagrant |  ok: [localhost] => {
+    "msg": "Inicio de tareas dentro del Rol: TP_INI"
+}
+2024-11-21 14:53:37,762 p=26544 u=vagrant |  TASK [TP_INI : Creo directorio para el archivo] ******************************************************************************************
+2024-11-21 14:53:39,503 p=26544 u=vagrant |  ok: [127.0.0.1]
+2024-11-21 14:53:39,537 p=26544 u=vagrant |  ok: [localhost]
+2024-11-21 14:53:39,586 p=26544 u=vagrant |  ok: [192.168.56.10]
+2024-11-21 14:53:39,821 p=26544 u=vagrant |  ok: [192.168.56.11]
+2024-11-21 14:53:39,966 p=26544 u=vagrant |  TASK [TP_INI : Creo el archivo desde template] *******************************************************************************************
+2024-11-21 14:53:42,306 p=26544 u=vagrant |  ok: [127.0.0.1]
+2024-11-21 14:53:42,397 p=26544 u=vagrant |  ok: [localhost]
+2024-11-21 14:53:42,585 p=26544 u=vagrant |  ok: [192.168.56.10]
+2024-11-21 14:53:42,888 p=26544 u=vagrant |  ok: [192.168.56.11]
+2024-11-21 14:53:42,956 p=26544 u=vagrant |  TASK [include_role] **********************************************************************************************************************
+2024-11-21 14:53:43,831 p=26544 u=vagrant |  TASK [Alta_Usuarios_Dinamita : Parciando listado de grupos secundarios: LIST_USUARIOS.GROUPS] ********************************************
+2024-11-21 14:53:44,165 p=26544 u=vagrant |  ok: [127.0.0.1] => (item={u'USERNAME': u'R1_Sergio_moyano', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R1'})
+2024-11-21 14:53:44,167 p=26544 u=vagrant |  ok: [127.0.0.1] => (item={u'USERNAME': u'R2_Joel_Monzon', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R2'})
+2024-11-21 14:53:44,169 p=26544 u=vagrant |  ok: [127.0.0.1] => (item={u'USERNAME': u'R3_Agustin_Paredes', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R3'})
+2024-11-21 14:53:44,172 p=26544 u=vagrant |  ok: [127.0.0.1] => (item={u'USERNAME': u'R4_Otro_usu', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R4'})
+2024-11-21 14:53:44,175 p=26544 u=vagrant |  ok: [127.0.0.1] => (item={u'USERNAME': u'R5_Hector_Nazadek', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R5'})
+2024-11-21 14:53:44,184 p=26544 u=vagrant |  ok: [127.0.0.1] => (item={u'USERNAME': u'R6_Hector_Naza', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R6'})
+2024-11-21 14:53:44,312 p=26544 u=vagrant |  ok: [192.168.56.10] => (item={u'USERNAME': u'R1_Sergio_moyano', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R1'})
+2024-11-21 14:53:44,316 p=26544 u=vagrant |  ok: [192.168.56.10] => (item={u'USERNAME': u'R2_Joel_Monzon', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R2'})
+2024-11-21 14:53:44,319 p=26544 u=vagrant |  ok: [192.168.56.10] => (item={u'USERNAME': u'R3_Agustin_Paredes', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R3'})
+2024-11-21 14:53:44,330 p=26544 u=vagrant |  ok: [192.168.56.10] => (item={u'USERNAME': u'R4_Otro_usu', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R4'})
+2024-11-21 14:53:44,333 p=26544 u=vagrant |  ok: [192.168.56.10] => (item={u'USERNAME': u'R5_Hector_Nazadek', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R5'})
+2024-11-21 14:53:44,337 p=26544 u=vagrant |  ok: [192.168.56.10] => (item={u'USERNAME': u'R6_Hector_Naza', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R6'})
+2024-11-21 14:53:44,362 p=26544 u=vagrant |  ok: [192.168.56.11] => (item={u'USERNAME': u'R1_Sergio_moyano', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R1'})
+2024-11-21 14:53:44,367 p=26544 u=vagrant |  ok: [192.168.56.11] => (item={u'USERNAME': u'R2_Joel_Monzon', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R2'})
+2024-11-21 14:53:44,386 p=26544 u=vagrant |  ok: [192.168.56.11] => (item={u'USERNAME': u'R3_Agustin_Paredes', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R3'})
+2024-11-21 14:53:44,402 p=26544 u=vagrant |  ok: [192.168.56.11] => (item={u'USERNAME': u'R4_Otro_usu', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R4'})
+2024-11-21 14:53:44,410 p=26544 u=vagrant |  ok: [localhost] => (item={u'USERNAME': u'R1_Sergio_moyano', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R1'})
+2024-11-21 14:53:44,412 p=26544 u=vagrant |  ok: [localhost] => (item={u'USERNAME': u'R2_Joel_Monzon', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R2'})
+2024-11-21 14:53:44,420 p=26544 u=vagrant |  ok: [192.168.56.11] => (item={u'USERNAME': u'R5_Hector_Nazadek', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R5'})
+2024-11-21 14:53:44,424 p=26544 u=vagrant |  ok: [localhost] => (item={u'USERNAME': u'R3_Agustin_Paredes', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R3'})
+2024-11-21 14:53:44,439 p=26544 u=vagrant |  ok: [192.168.56.11] => (item={u'USERNAME': u'R6_Hector_Naza', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R6'})
+2024-11-21 14:53:44,442 p=26544 u=vagrant |  ok: [localhost] => (item={u'USERNAME': u'R4_Otro_usu', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R4'})
+2024-11-21 14:53:44,463 p=26544 u=vagrant |  ok: [localhost] => (item={u'USERNAME': u'R5_Hector_Nazadek', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R5'})
+2024-11-21 14:53:44,474 p=26544 u=vagrant |  ok: [localhost] => (item={u'USERNAME': u'R6_Hector_Naza', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R6'})
+2024-11-21 14:53:44,536 p=26544 u=vagrant |  TASK [Alta_Usuarios_Dinamita : Cargando listado GruposToCreate] **************************************************************************
+2024-11-21 14:53:44,633 p=26544 u=vagrant |  ok: [127.0.0.1]
+2024-11-21 14:53:44,890 p=26544 u=vagrant |  ok: [192.168.56.10]
+2024-11-21 14:53:44,921 p=26544 u=vagrant |  ok: [192.168.56.11]
+2024-11-21 14:53:44,997 p=26544 u=vagrant |  ok: [localhost]
+2024-11-21 14:53:45,073 p=26544 u=vagrant |  TASK [Alta_Usuarios_Dinamita : Alta de groups Secundarios del usuario] *******************************************************************
+2024-11-21 14:53:46,820 p=26544 u=vagrant |  changed: [127.0.0.1] => (item=G_R1)
+2024-11-21 14:53:46,870 p=26544 u=vagrant |  changed: [localhost] => (item=G_R1)
+2024-11-21 14:53:46,955 p=26544 u=vagrant |  ok: [192.168.56.10] => (item=G_R1)
+2024-11-21 14:53:47,584 p=26544 u=vagrant |  failed: [127.0.0.1] (item=G_R2) => {"changed": false, "item": "G_R2", "msg": "groupadd: group 'G_R2' already exists\n", "name": "G_R2"}
+2024-11-21 14:53:47,633 p=26544 u=vagrant |  changed: [localhost] => (item=G_R2)
+2024-11-21 14:53:47,995 p=26544 u=vagrant |  changed: [192.168.56.11] => (item=G_R1)
+2024-11-21 14:53:48,028 p=26544 u=vagrant |  ok: [192.168.56.10] => (item=G_R2)
+2024-11-21 14:53:48,410 p=26544 u=vagrant |  changed: [localhost] => (item=G_R3)
+2024-11-21 14:53:48,446 p=26544 u=vagrant |  ok: [127.0.0.1] => (item=G_R3)
+2024-11-21 14:53:49,154 p=26544 u=vagrant |  ok: [192.168.56.10] => (item=G_R3)
+2024-11-21 14:53:49,219 p=26544 u=vagrant |  failed: [localhost] (item=G_R4) => {"changed": false, "item": "G_R4", "msg": "groupadd: group 'G_R4' already exists\n", "name": "G_R4"}
+2024-11-21 14:53:49,258 p=26544 u=vagrant |  changed: [127.0.0.1] => (item=G_R4)
+2024-11-21 14:53:49,533 p=26544 u=vagrant |  changed: [192.168.56.11] => (item=G_R2)
+2024-11-21 14:53:50,121 p=26544 u=vagrant |  changed: [localhost] => (item=G_R5)
+2024-11-21 14:53:50,187 p=26544 u=vagrant |  ok: [127.0.0.1] => (item=G_R5)
+2024-11-21 14:53:50,190 p=26544 u=vagrant |  ok: [192.168.56.10] => (item=G_R4)
+2024-11-21 14:53:50,968 p=26544 u=vagrant |  changed: [localhost] => (item=G_R6)
+2024-11-21 14:53:50,987 p=26544 u=vagrant |  ok: [127.0.0.1] => (item=G_R6)
+2024-11-21 14:53:51,146 p=26544 u=vagrant |  ok: [192.168.56.10] => (item=G_R5)
+2024-11-21 14:53:51,158 p=26544 u=vagrant |  changed: [192.168.56.11] => (item=G_R3)
+2024-11-21 14:53:51,844 p=26544 u=vagrant |  ok: [192.168.56.10] => (item=G_R6)
+2024-11-21 14:53:52,514 p=26544 u=vagrant |  changed: [192.168.56.11] => (item=G_R4)
+2024-11-21 14:53:53,658 p=26544 u=vagrant |  changed: [192.168.56.11] => (item=G_R5)
+2024-11-21 14:53:54,878 p=26544 u=vagrant |  changed: [192.168.56.11] => (item=G_R6)
+2024-11-21 14:53:54,963 p=26544 u=vagrant |  TASK [Alta_Usuarios_Dinamita : Agregando group Primario del usuario] *********************************************************************
+2024-11-21 14:53:55,832 p=26544 u=vagrant |  changed: [192.168.56.10] => (item={u'USERNAME': u'R1_Sergio_moyano', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R1'})
+2024-11-21 14:53:56,540 p=26544 u=vagrant |  changed: [192.168.56.10] => (item={u'USERNAME': u'R2_Joel_Monzon', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R2'})
+2024-11-21 14:53:56,591 p=26544 u=vagrant |  changed: [192.168.56.11] => (item={u'USERNAME': u'R1_Sergio_moyano', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R1'})
+2024-11-21 14:53:57,218 p=26544 u=vagrant |  changed: [192.168.56.10] => (item={u'USERNAME': u'R3_Agustin_Paredes', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R3'})
+2024-11-21 14:53:57,841 p=26544 u=vagrant |  changed: [192.168.56.11] => (item={u'USERNAME': u'R2_Joel_Monzon', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R2'})
+2024-11-21 14:53:57,863 p=26544 u=vagrant |  changed: [192.168.56.10] => (item={u'USERNAME': u'R4_Otro_usu', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R4'})
+2024-11-21 14:53:58,560 p=26544 u=vagrant |  changed: [192.168.56.10] => (item={u'USERNAME': u'R5_Hector_Nazadek', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R5'})
+2024-11-21 14:53:59,134 p=26544 u=vagrant |  changed: [192.168.56.11] => (item={u'USERNAME': u'R3_Agustin_Paredes', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R3'})
+2024-11-21 14:53:59,215 p=26544 u=vagrant |  changed: [192.168.56.10] => (item={u'USERNAME': u'R6_Hector_Naza', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R6'})
+2024-11-21 14:54:00,332 p=26544 u=vagrant |  changed: [192.168.56.11] => (item={u'USERNAME': u'R4_Otro_usu', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R4'})
+2024-11-21 14:54:01,599 p=26544 u=vagrant |  changed: [192.168.56.11] => (item={u'USERNAME': u'R5_Hector_Nazadek', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R5'})
+2024-11-21 14:54:02,768 p=26544 u=vagrant |  changed: [192.168.56.11] => (item={u'USERNAME': u'R6_Hector_Naza', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R6'})
+2024-11-21 14:54:02,842 p=26544 u=vagrant |  TASK [Alta_Usuarios_Dinamita : Alta y/o Actualizacion del usuario] ***********************************************************************
+2024-11-21 14:54:04,756 p=26544 u=vagrant |  changed: [192.168.56.10] => (item={u'USERNAME': u'R1_Sergio_moyano', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R1'})
+2024-11-21 14:54:05,206 p=26544 u=vagrant |  changed: [192.168.56.11] => (item={u'USERNAME': u'R1_Sergio_moyano', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R1'})
+2024-11-21 14:54:05,601 p=26544 u=vagrant |  changed: [192.168.56.10] => (item={u'USERNAME': u'R2_Joel_Monzon', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R2'})
+2024-11-21 14:54:06,497 p=26544 u=vagrant |  changed: [192.168.56.10] => (item={u'USERNAME': u'R3_Agustin_Paredes', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R3'})
+2024-11-21 14:54:06,714 p=26544 u=vagrant |  changed: [192.168.56.11] => (item={u'USERNAME': u'R2_Joel_Monzon', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R2'})
+2024-11-21 14:54:07,523 p=26544 u=vagrant |  changed: [192.168.56.10] => (item={u'USERNAME': u'R4_Otro_usu', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R4'})
+2024-11-21 14:54:08,222 p=26544 u=vagrant |  changed: [192.168.56.11] => (item={u'USERNAME': u'R3_Agustin_Paredes', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R3'})
+2024-11-21 14:54:08,381 p=26544 u=vagrant |  changed: [192.168.56.10] => (item={u'USERNAME': u'R5_Hector_Nazadek', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R5'})
+2024-11-21 14:54:09,274 p=26544 u=vagrant |  changed: [192.168.56.10] => (item={u'USERNAME': u'R6_Hector_Naza', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R6'})
+2024-11-21 14:54:09,777 p=26544 u=vagrant |  changed: [192.168.56.11] => (item={u'USERNAME': u'R4_Otro_usu', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R4'})
+2024-11-21 14:54:11,094 p=26544 u=vagrant |  changed: [192.168.56.11] => (item={u'USERNAME': u'R5_Hector_Nazadek', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R5'})
+2024-11-21 14:54:12,529 p=26544 u=vagrant |  changed: [192.168.56.11] => (item={u'USERNAME': u'R6_Hector_Naza', u'HASH': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv/KrHPiUmIuTKhnmt1hRacZEXXufmlUes3pEaDZ/HcjjK1NVBXmnyWI3JIJ5B+JT1VzkWDhc6TfQWXjA33tOK5v7izNhmtT9NPxGRoUW1ODTdJwCyLoB3zb3D7NYYBpCfJB8KwXO9TSM3tpIARFjr+8iYp0ybCVlxnlPXBkv56eiJ3O6mKHHsZObU4DgH5jiX+ptyieyVvxryJVtuORz7XjmGXAY/RyIVzN9HeSMp4MenaHPwgylAm7TQa18GeHZX5aPrRWJlqs3+8dNf2MTWBfVxXvvheCZ0HpmkUHna70XVURP4MaFdKblmm/X2YlrFIOocUEeVherdqYCZjwxd', u'GROUPS': u'G_R6'})
+2024-11-21 14:54:12,627 p=26544 u=vagrant |  TASK [include_role] **********************************************************************************************************************
+2024-11-21 14:54:13,164 p=26544 u=vagrant |  TASK [Sudoers_Dinamita : Rol: Sudoers_Dinamita - Grupo: Dinamita] ************************************************************************
+2024-11-21 14:54:13,277 p=26544 u=vagrant |  ok: [192.168.56.10] => {
+    "msg": "Inicio de tareas dentro del Rol: Sudoers_Dinamita"
+}
+2024-11-21 14:54:13,419 p=26544 u=vagrant |  ok: [192.168.56.11] => {
+    "msg": "Inicio de tareas dentro del Rol: Sudoers_Dinamita"
+}
+2024-11-21 14:54:13,523 p=26544 u=vagrant |  TASK [Sudoers_Dinamita : Agregar grupo Dinamita a sudoers sin clave] *********************************************************************
+2024-11-21 14:54:14,732 p=26544 u=vagrant |  changed: [192.168.56.10]
+2024-11-21 14:54:15,264 p=26544 u=vagrant |  changed: [192.168.56.11]
+2024-11-21 14:54:15,272 p=26544 u=vagrant |  	to retry, use: --limit @/home/vagrant/repogit/TP_AySO_Integral_Dinamita/ansible/playbook.retry
+
+2024-11-21 14:54:15,273 p=26544 u=vagrant |  PLAY RECAP *******************************************************************************************************************************
+2024-11-21 14:54:15,274 p=26544 u=vagrant |  127.0.0.1                  : ok=8    changed=0    unreachable=0    failed=1   
+2024-11-21 14:54:15,276 p=26544 u=vagrant |  192.168.56.10              : ok=13   changed=3    unreachable=0    failed=0   
+2024-11-21 14:54:15,277 p=26544 u=vagrant |  192.168.56.11              : ok=13   changed=4    unreachable=0    failed=0   
+2024-11-21 14:54:15,277 p=26544 u=vagrant |  localhost                  : ok=8    changed=0    unreachable=0    failed=1   
+2024-11-21 14:54:15,277 p=26544 u=vagrant |  no-existe.com              : ok=0    changed=0    unreachable=1    failed=0   
+2024-11-21 14:54:15,278 p=26544 u=vagrant |  no-existe2.com             : ok=0    changed=0    unreachable=1    failed=0   
